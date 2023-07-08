@@ -8,7 +8,7 @@ world.beforeEvents.itemUse.subscribe(async events => {
     const vector = Vector.add(Vector.multiply(source.getViewDirection(), 1.5), source.getVelocity())
 
     system.run(() => {
-      source.applyKnockback(vector.x, vector.z, Math.hypot(vector.x, vector.z) * 2.5, vector.y < 0.0 ? 0.5 * vector.y : vector.y / 2 + 3)
+      source.applyKnockback(vector.x, vector.z, Math.hypot(vector.x, vector.z) * 2.3, vector.y < 0.0 ? 0.3 * vector.y : vector.y / 2)
       source.runCommandAsync("clear @s feather 0 1")
     })
   }
